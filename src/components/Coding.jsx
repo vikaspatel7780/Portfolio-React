@@ -4,7 +4,9 @@ import leetcode from "../assets/portfolios/leetcode.png";
 import gfg from "../assets/portfolios/gfg.png";
 import codingNinja from "../assets/portfolios/codingNinja.jpg";
 import codechef from "../assets/portfolios/codechef.jpg";
+import codeforces from "../assets/portfolios/codeforces.png";
 import hackerrank from "../assets/portfolios/hackerrank.png";
+
 
 const Coding = () => {
   const coding = [
@@ -22,7 +24,7 @@ const Coding = () => {
       src: gfg,
       link: "https://www.geeksforgeeks.org/user/vikaspatel7780/",
       title: "GeeksForGeeks",
-      rating: "Coding Score : 2275",
+      rating: "Coding Score : 1481",
       description: "Solved 450+ Problems.",
       style: "shadow-green-600",
     },
@@ -37,7 +39,7 @@ const Coding = () => {
     },
     {
       id: 4,
-      src: codechef,
+      src: codeforces,
       link: "https://codeforces.com/profile/vscoder123",
       title: "Codeforces",
       rating: " Max Rating : 1046",

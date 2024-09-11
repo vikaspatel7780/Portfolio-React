@@ -14,7 +14,7 @@ function App() {
     <div>
       <Navbar />
       <Home />
-      {/* <SocialLinks /> */}
+      <SocialLinks />
       <About />
       <Projects />
       <Skills />
