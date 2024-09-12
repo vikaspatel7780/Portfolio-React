@@ -11,7 +11,7 @@ const SocialLinks = () => {
             id: 1,
             name: 'LinkedIn',
             icon: <FaLinkedin size={30} />,
-            href: 'https://www.linkedin.com/in/pulkitgaur07/',
+            href: 'https://www.linkedin.com/in/vikas-patel-86714722a/',
             style: 'rounded',
         },
         {

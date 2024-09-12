@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePhoto from "../assets/ProfilePhoto.png";
+import ProfilePhoto from "../assets/ProfilePic4.jpg";
 import resume from "../assets/vscoder-resume.pdf";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
                 Full Stack Web Developer
               </span>
             </h1>
-            <p className="text-md italic text-gray-700 tracking-wide mt-5">
+            <p className="text-lg italic text-gray-700 tracking-wide mt-5">
               <span className="text-black text-4xl">I</span>
               <span className="text-black font-bold">'m</span> excited to
               enhance my skills by working on challenging projects using{" "}

@@ -48,11 +48,11 @@ const Education = () => {
           </p>
         </div>
         {/* Education Items */}
-        <div className="w-full py-8 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className=" flex gap-10 flex-wrap w-1/3 flex-row h-auto">
           {education.map(({ id, src, college, course, time, date, style }) => (
             <div
               key={id}
-              className={`shadow-lg hover:scale-105 transition-transform duration-300 py-4 rounded-lg flex items-center bg-white ${style}`}
+              className={`shadow-lg hover:scale-105 transition-transform duration-300 py-4 rounded-lg flex flex-col items-center bg-white ${style}`}
             >
               <img src={src} alt={college} className="h-24 w-24 ml-4 rounded-md shadow-md" />
               <div className="ml-6">

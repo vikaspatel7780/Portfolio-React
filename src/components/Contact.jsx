@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
-import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../constant";
+
 
 const Contact = () => {
   const form = useRef();
@@ -12,7 +12,7 @@ const Contact = () => {
     setLoading(true); // Start loading
 
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .sendForm( process.env.VITE_SERVICE_ID, process.env.VITE_TEMPLATE_ID, form.current,  process.env.VITE_PUBLIC_KEY)
       .then(
         () => {
           toast.success("Your message was sent successfully!");

@@ -56,11 +56,11 @@ const Projects = () => {
           {projects.map(({ id, src, title, liveLink, githubLink }) => (
             <div
               key={id}
-              className="relative w-96  rounded-lg shadow-lg transform transition duration-300 hover:scale-105 lg:hover:scale-125 hover:shadow-2xl bg-gradient-to-r from-white to-blue-400"
+              className="relative w-4/5  rounded-lg shadow-lg transform transition duration-300 hover:shadow-2xl bg-gradient-to-r from-white to-blue-400"
             >
               {/* Image with hover effect */}
               <div
-                className="h-48 bg-cover"
+                className=" h-96 bg-cover"
                 style={{ backgroundImage: `url(${src})` }}
               ></div>
 
