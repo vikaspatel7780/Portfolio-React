@@ -22,7 +22,7 @@ const About = () => {
             
           </div>
           <div className="lg:w-1/2 flex items-center">
-            <p className="text-lg italic text-gray-700 tracking-wide">
+            <p className="text-xl italic text-gray-700 tracking-wide">
               <span className="text-black text-4xl">I</span>
               <span className="text-black font-bold">'m</span> a{" "}
               <span className="bg-gradient-to-r from-red-600 to-blue-500 text-transparent bg-clip-text font-semibold">

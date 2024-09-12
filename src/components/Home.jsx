@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div name="home" className="w-full bg-gray-100">
       <div className="py-16">
-        <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center h-full gap-24 px-6 md:flex-row md:px-12">
+        <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center h-full gap-3 lg:gap-24 px-6 lg:flex-row md:px-12">
           {/* Text Section */}
           <div className="flex flex-col justify-center h-full lg:w-1/2">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
@@ -16,7 +16,7 @@ const Home = () => {
                 Full Stack Web Developer
               </span>
             </h1>
-            <p className="text-lg italic text-gray-700 tracking-wide mt-5">
+            <p className="text-xl italic text-gray-700 tracking-wide mt-5">
               <span className="text-black text-4xl">I</span>
               <span className="text-black font-bold">'m</span> excited to
               enhance my skills by working on challenging projects using{" "}
@@ -60,11 +60,11 @@ const Home = () => {
           </div>
 
           {/* Image Section */}
-          <div className="flex justify-center lg:w-1/2 mb-8 lg:mb-0 ">
+          <div className="flex justify-center mb-8 ">
             <img
               src={ProfilePhoto}
               alt="My profile"
-              className="p-6 filter grayscale transition-all duration-3000 h-[250px] w-auto sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[400px] hero_photo"
+              className="p-6 filter grayscale transition-all duration-3000 h-[350px] w-auto sm:h-[400px] md:h-[450px] lg:h-[500px] hero_photo"
             />
           </div>
         </div>

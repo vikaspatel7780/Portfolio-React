@@ -39,27 +39,32 @@ const Education = () => {
   ];
 
   return (
-    <div name="education" className="w-full py-12">
-      <div className="max-w-screen-xl mx-auto p-12 flex flex-col justify-center w-full h-full relative">
+    <div name="education" className="py-12">
+      <div className="p-12 flex flex-col justify-center">
         {/* Title */}
         <div className="flex justify-center mb-8">
           <p className="text-5xl font-bold text-black border-b-4 border-gray-500 p-2">
             Education
           </p>
         </div>
+  
         {/* Education Items */}
-        <div className=" flex gap-10 flex-wrap w-1/3 flex-row h-auto">
-          {education.map(({ id, src, college, course, time, date, style }) => (
+        <div className="flex flex-wrap justify-center gap-8">
+          {education.map(({ id, src, college, course, time, date }) => (
             <div
               key={id}
-              className={`shadow-lg hover:scale-105 transition-transform duration-300 py-4 rounded-lg flex flex-col items-center bg-white ${style}`}
+              className="shadow-lg shadow-slate-500 hover:scale-105 transition-transform duration-300 py-4 rounded-lg flex flex-col items-center bg-white border-2 border-stone-200"
             >
-              <img src={src} alt={college} className="h-24 w-24 ml-4 rounded-md shadow-md" />
-              <div className="ml-6">
-                <h2 className="text-xl font-bold mb-1 bg-gradient-to-r from-red-600 to-blue-500 text-transparent bg-clip-text">{college}</h2>
-                <p className="text-md bg-gradient-to-r from-blue-700 to-black text-transparent bg-clip-text">{course}</p>
-                <p className="text-sm bg-gradient-to-r from-red-600 to-blue-500 text-transparent bg-clip-text">{time}</p>
-                <p className="text-md italic bg-gradient-to-r from-red-600 to-blue-500 text-transparent bg-clip-text">{date}</p>
+              <img
+                src={src}
+                alt={college}
+                className="h-32 rounded-md shadow-md "
+              />
+              <div className="text-center">
+                <h2 className="text-xl font-bold mb-1 text-black pl-4 pr-4 bg-gradient-to-r from-red-600 to-blue-500 text-transparent bg-clip-text">{college}</h2>
+                <p className="text-md text-gray-700 bg-gradient-to-r from-red-600 to-blue-500 text-transparent bg-clip-text">{course}</p>
+                <p className="text-sm text-gray-500 bg-gradient-to-r from-slate-600 to-blue-500 text-transparent bg-clip-text">{time}</p>
+                <p className="text-md italic text-gray-500 bg-gradient-to-r from-green-600 to-blue-500 text-transparent bg-clip-text">{date}</p>
               </div>
             </div>
           ))}
@@ -67,6 +72,7 @@ const Education = () => {
       </div>
     </div>
   );
+  
   
 };
 
