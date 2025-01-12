@@ -7,7 +7,6 @@ import codechef from "../assets/portfolios/codechef.jpg";
 import codeforces from "../assets/portfolios/codeforces.png";
 import hackerrank from "../assets/portfolios/hackerrank.png";
 
-
 const Coding = () => {
   const coding = [
     {
