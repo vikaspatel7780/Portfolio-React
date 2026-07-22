@@ -3,6 +3,7 @@ import { FiCpu, FiDatabase, FiZap } from "react-icons/fi";
 import { aiCapabilities } from "../data/portfolio";
 import { fadeUp } from "./ui/animations";
 import { Section, SectionHeader } from "./ui/MotionPrimitives";
+import AITerminal from "./ui/AITerminal";
 
 const GenAI = () => {
   return (
@@ -31,21 +32,26 @@ const GenAI = () => {
             </div>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="premium-card p-5 sm:p-7 md:p-8">
-            <div className="grid gap-2.5 sm:gap-3">
-              {aiCapabilities.map((capability, index) => (
-                <motion.div
-                  key={capability}
-                  className="flex items-start gap-3.5 rounded-2xl border border-white/10 bg-black/[0.18] p-3.5 sm:p-4 transition hover:bg-white/[0.06]"
-                  whileHover={{ x: 4 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-cyan-300/[0.16] text-xs font-black text-cyan-200">
-                    {index + 1}
-                  </span>
-                  <p className="text-xs sm:text-sm leading-6 text-white/80">{capability}</p>
-                </motion.div>
-              ))}
+          <motion.div variants={fadeUp} className="space-y-6">
+            <AITerminal />
+
+            <div className="premium-card p-5 sm:p-6">
+              <h4 className="text-xs font-black uppercase tracking-wider text-cyan-300 mb-3">Core AI System Capabilities</h4>
+              <div className="grid gap-2.5">
+                {aiCapabilities.map((capability, index) => (
+                  <motion.div
+                    key={capability}
+                    className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/[0.18] p-3 transition hover:bg-white/[0.06]"
+                    whileHover={{ x: 4 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-cyan-300/[0.16] text-[10px] font-black text-cyan-200">
+                      {index + 1}
+                    </span>
+                    <p className="text-xs leading-5 text-white/80">{capability}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
@@ -55,4 +61,5 @@ const GenAI = () => {
 };
 
 export default GenAI;
+
 
