@@ -14,23 +14,23 @@ const Experience = () => {
 
         <div className="grid gap-5">
           {experiences.map((item) => (
-            <AnimatedCard key={item.company} className="p-6 md:p-8">
-              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <AnimatedCard key={item.company} className="p-5 sm:p-7 md:p-8">
+              <div className="flex flex-col gap-4 sm:gap-6 md:flex-row md:items-start md:justify-between">
                 <div>
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-300/[0.12] text-cyan-200">
-                    <FiBriefcase size={24} />
+                  <div className="mb-3.5 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-cyan-300/[0.14] text-cyan-300">
+                    <FiBriefcase size={22} />
                   </div>
-                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-white/[0.42]">{item.company} - {item.location}</p>
-                  <h3 className="mt-2 max-w-3xl text-2xl font-black text-white md:text-4xl">{item.title}</h3>
+                  <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-cyan-200/80">{item.company} • {item.location}</p>
+                  <h3 className="mt-1.5 text-xl sm:text-2xl md:text-3xl font-black text-white">{item.title}</h3>
                 </div>
-                <p className="w-fit rounded-full border border-white/[0.12] bg-white/[0.08] px-4 py-2 text-sm font-bold text-white/[0.62]">{item.period}</p>
+                <p className="w-fit rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 py-1.5 text-xs sm:text-sm font-bold text-cyan-100">{item.period}</p>
               </div>
 
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
+              <div className="mt-6 sm:mt-8 grid gap-3 grid-cols-1 md:grid-cols-2">
                 {item.highlights.map((highlight) => (
-                  <div key={highlight} className="flex gap-3 rounded-2xl border border-white/10 bg-black/[0.14] p-4">
-                    <FiCheckCircle className="mt-1 shrink-0 text-cyan-200" />
-                    <p className="text-sm leading-6 text-white/[0.68]">{highlight}</p>
+                  <div key={highlight} className="flex gap-3 rounded-2xl border border-white/10 bg-black/[0.2] p-3.5 sm:p-4">
+                    <FiCheckCircle className="mt-0.5 shrink-0 text-cyan-300" size={18} />
+                    <p className="text-xs sm:text-sm leading-6 text-white/[0.75]">{highlight}</p>
                   </div>
                 ))}
               </div>
@@ -43,3 +43,4 @@ const Experience = () => {
 };
 
 export default Experience;
+

@@ -10,7 +10,7 @@ export function Section({ children, className = "", name }) {
       className={`section-shell ${className}`}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-110px" }}
+      viewport={{ once: true, margin: "-40px" }}
       variants={stagger}
     >
       {children}
@@ -23,7 +23,7 @@ export function SectionHeader({ eyebrow, title, description, align = "center" })
 
   return (
     <motion.div
-      className={`mb-10 ${centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}`}
+      className={`mb-8 sm:mb-12 ${centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}`}
       variants={fadeUp}
     >
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
@@ -41,9 +41,11 @@ export function MagneticButton({ children, className = "", href, ...props }) {
   const Component = href ? motion.a : motion.button;
 
   const handleMouseMove = (event) => {
+    // Only apply magnetic effect on pointer devices (not pure touch)
+    if (window.matchMedia("(pointer: coarse)").matches) return;
     const rect = event.currentTarget.getBoundingClientRect();
-    x.set((event.clientX - rect.left - rect.width / 2) * 0.24);
-    y.set((event.clientY - rect.top - rect.height / 2) * 0.24);
+    x.set((event.clientX - rect.left - rect.width / 2) * 0.22);
+    y.set((event.clientY - rect.top - rect.height / 2) * 0.22);
   };
 
   return (
@@ -56,7 +58,7 @@ export function MagneticButton({ children, className = "", href, ...props }) {
         x.set(0);
         y.set(0);
       }}
-      whileTap={{ scale: 0.97 }}
+      whileTap={{ scale: 0.96 }}
       {...props}
     >
       {children}
@@ -68,11 +70,13 @@ export function AnimatedCard({ children, className = "" }) {
   return (
     <motion.div
       variants={fadeUp}
-      whileHover={{ y: -8, scale: 1.01 }}
-      transition={{ duration: 0.28, ease: "easeOut" }}
+      whileHover={{ y: -6, scale: 1.008 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
       className={`premium-card ${className}`}
     >
       {children}
     </motion.div>
   );
 }
+
