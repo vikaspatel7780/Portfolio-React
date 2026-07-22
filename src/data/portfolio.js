@@ -30,9 +30,9 @@ export const profile = {
   phone: "9451002578",
   location: "Lucknow, India",
   github: "https://github.com/vikaspatel7780",
-  linkedin: "https://www.linkedin.com/in/vikas-patel-86714722a/",
+  linkedin: "https://www.linkedin.com/in/vikaspatel7780/",
   twitter: "https://x.com/vscoder7780",
-  website: "https://vscoder-portfolio.netlify.app/",
+  website: "https://vscoder7780.onrender.com/",
 };
 
 export const heroStats = [
@@ -49,7 +49,7 @@ export const experiences = [
     title: "Software Engineer - Mobile, Android & Generative AI",
     period: "April 2025 - Present",
     highlights: [
-      "Developing mEinstein, an Android AI assistant using Kotlin, Jetpack Compose, MVVM, Room, Retrofit, and WorkManager.",
+      "Developing app, an Android AI assistant using Kotlin, Jetpack Compose, MVVM, Room, Retrofit, and WorkManager.",
       "Integrated GPT-5, Gemma, and LLaMA 2B with RAG, vector search, prompt pipelines, and offline-first inference.",
       "Built modular Compose UI, clean state management with ViewModel and LiveData, plus resilient API fallback flows.",
       "Integrated Google Maps, Places, Autocomplete, Movement SDK, and Gmail SDK for location-aware and email-intelligence features.",
@@ -200,7 +200,7 @@ export const codingProfiles = [
   {
     id: 5,
     src: hackerrank,
-    link: "https://www.hackerrank.com/profile/Pulkitgaur9450",
+    link: "https://www.hackerrank.com/profile/vikaspatel0609",
     title: "HackerRank",
     rating: "6 star in Problem Solving",
     description: "5 star in C++",

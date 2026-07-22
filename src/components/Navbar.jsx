@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { FiSearch } from "react-icons/fi";
 import logo from "../assets/portfolios/logo.png";
 
 const links = [
@@ -41,7 +43,7 @@ const navItemVariants = {
   show: { opacity: 1, x: 0 },
 };
 
-const Navbar = () => {
+const Navbar = ({ onOpenCommandPalette }) => {
   const [nav, setNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -102,28 +104,54 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Desktop Contact CTA */}
-        <Link
-          to="contact"
-          smooth
-          duration={550}
-          offset={-82}
-          aria-label="Jump to contact"
-          className="hidden h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/[0.14] bg-white/[0.08] text-white transition hover:border-cyan-300/50 hover:bg-white/[0.16] hover:scale-105 lg:flex"
-        >
-          <HiOutlineMail size={22} />
-        </Link>
+        {/* Desktop Actions */}
+        <div className="hidden lg:flex items-center gap-2">
+          {/* Command Palette Trigger */}
+          <button
+            type="button"
+            onClick={onOpenCommandPalette}
+            className="flex h-11 items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 text-xs font-bold text-white/70 transition hover:border-cyan-300/50 hover:bg-white/[0.16] hover:text-white"
+            aria-label="Open command palette"
+          >
+            <FiSearch size={16} className="text-cyan-300" />
+            <span>Search</span>
+            <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[10px] text-white/50">⌘K</kbd>
+          </button>
+
+          {/* Contact CTA */}
+          <Link
+            to="contact"
+            smooth
+            duration={550}
+            offset={-82}
+            aria-label="Jump to contact"
+            className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/[0.14] bg-white/[0.08] text-white transition hover:border-cyan-300/50 hover:bg-white/[0.16] hover:scale-105"
+          >
+            <HiOutlineMail size={22} />
+          </Link>
+        </div>
 
         {/* Mobile Menu Trigger */}
-        <button
-          type="button"
-          onClick={() => setNav((open) => !open)}
-          className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/[0.14] bg-white/[0.08] text-white transition hover:bg-white/[0.16] active:scale-95 lg:hidden"
-          aria-label={nav ? "Close navigation" : "Open navigation"}
-          aria-expanded={nav}
-        >
-          {nav ? <FaTimes size={19} /> : <FaBars size={19} />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            type="button"
+            onClick={onOpenCommandPalette}
+            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/[0.14] bg-white/[0.08] text-white"
+            aria-label="Search"
+          >
+            <FiSearch size={18} className="text-cyan-300" />
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setNav((open) => !open)}
+            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/[0.14] bg-white/[0.08] text-white transition hover:bg-white/[0.16] active:scale-95"
+            aria-label={nav ? "Close navigation" : "Open navigation"}
+            aria-expanded={nav}
+          >
+            {nav ? <FaTimes size={19} /> : <FaBars size={19} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Backdrop & Drawer */}
@@ -172,4 +200,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 

@@ -5,6 +5,7 @@ import resume from "../assets/vscoder-resume.pdf";
 import { heroStats, profile } from "../data/portfolio";
 import { fadeUp, stagger } from "./ui/animations";
 import { MagneticButton } from "./ui/MotionPrimitives";
+import OrbitingSkills from "./ui/OrbitingSkills";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -59,7 +60,7 @@ const Home = () => {
           </motion.div>
         </motion.div>
 
-        {/* Profile Card */}
+        {/* Profile Card with Orbiting Skills */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -67,7 +68,13 @@ const Home = () => {
           className="relative mx-auto w-full max-w-[22rem] sm:max-w-[28rem] mt-4 lg:mt-0"
         >
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan-300/[0.2] via-teal-400/[0.05] to-blue-500/[0.2] blur-2xl" />
-          <div className="premium-card hero_photo relative p-2.5 sm:p-3">
+          
+          {/* Orbiting 3D Skill Icons */}
+          <div className="hidden sm:block">
+            <OrbitingSkills />
+          </div>
+
+          <div className="premium-card hero_photo relative p-2.5 sm:p-3 z-10">
             <img
               src={ProfilePhoto}
               alt="Vikas Patel profile"
@@ -75,7 +82,7 @@ const Home = () => {
             />
             <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 rounded-2xl sm:rounded-3xl border border-white/[0.14] bg-black/[0.6] p-3 sm:p-4 backdrop-blur-2xl">
               <p className="text-xs sm:text-sm font-black text-white flex items-center justify-between">
-                mEinstein AI Assistant
+                Android AI Assistant
                 <span className="h-2 w-2 rounded-full bg-cyan-300 animate-ping" />
               </p>
               <p className="mt-1 text-[11px] sm:text-xs leading-4 sm:leading-5 text-white/[0.68]">Kotlin, Compose, RAG, Gemma, GPT-5, WorkManager</p>
@@ -88,4 +95,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
