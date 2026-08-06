@@ -15,7 +15,7 @@ export default function ConstellationCanvas() {
     let height = (canvas.height = window.innerHeight);
 
     // Responsive particle count
-    const particleCount = Math.min(Math.floor((width * height) / 22000), 55);
+    const particleCount = Math.min(Math.floor((width * height) / 17000), 72);
 
     const mouse = {
       x: -1000,
@@ -29,8 +29,8 @@ export default function ConstellationCanvas() {
         this.y = Math.random() * height;
         this.vx = (Math.random() - 0.5) * 0.45;
         this.vy = (Math.random() - 0.5) * 0.45;
-        this.radius = Math.random() * 1.5 + 1;
-        this.baseAlpha = Math.random() * 0.35 + 0.15;
+        this.radius = Math.random() * 1.35 + 0.8;
+        this.baseAlpha = Math.random() * 0.32 + 0.25;
       }
 
       update() {
@@ -46,9 +46,9 @@ export default function ConstellationCanvas() {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(94, 234, 212, ${this.baseAlpha})`;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = "#5eead4";
+        ctx.fillStyle = `rgba(191, 226, 255, ${this.baseAlpha})`;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "#67e8f9";
         ctx.fill();
         ctx.shadowBlur = 0;
       }
@@ -69,7 +69,7 @@ export default function ConstellationCanvas() {
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
-      particles = Array.from({ length: Math.min(Math.floor((width * height) / 22000), 55) }, () => new Particle());
+      particles = Array.from({ length: Math.min(Math.floor((width * height) / 17000), 72) }, () => new Particle());
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
@@ -92,8 +92,8 @@ export default function ConstellationCanvas() {
           const dy = p1.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 110) {
-            const alpha = (1 - dist / 110) * 0.22;
+          if (dist < 125) {
+            const alpha = (1 - dist / 125) * 0.24;
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
@@ -135,7 +135,7 @@ export default function ConstellationCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0 h-full w-full opacity-60"
+      className="pointer-events-none fixed inset-0 z-0 h-full w-full opacity-75"
     />
   );
 }

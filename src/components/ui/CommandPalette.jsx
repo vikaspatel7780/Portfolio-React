@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiSearch, FiCode, FiUser, FiBriefcase, FiFolder, FiCpu, FiAward, FiMail, FiDownload, FiGithub, FiLinkedin, FiX } from "react-icons/fi";
+import { FiSearch, FiCode, FiUser, FiBriefcase, FiFolder, FiCpu, FiMail, FiDownload, FiGithub, FiLinkedin, FiX } from "react-icons/fi";
 import { scroller } from "react-scroll";
 import resume from "../../assets/vscoder-resume.pdf";
 import { profile } from "../../data/portfolio";

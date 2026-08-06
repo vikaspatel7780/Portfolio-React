@@ -42,21 +42,35 @@ export const heroStats = [
   { value: "3 Star", label: "CodeChef rating" },
 ];
 
-export const experiences = [
+export const experience = [
   {
-    company: "IPH Technologies",
-    location: "Lucknow, India",
-    title: "Software Engineer - Mobile, Android & Generative AI",
-    period: "April 2025 - Present",
+    company: "IPH Technologies Pvt. Ltd.",
+    location: "Lucknow, Uttar Pradesh",
+    title: "Software Engineer Trainee",
+    period: "Oct 2024 – Apr 2025",
     highlights: [
-      "Developing app, an Android AI assistant using Kotlin, Jetpack Compose, MVVM, Room, Retrofit, and WorkManager.",
-      "Integrated GPT-5, Gemma, and LLaMA 2B with RAG, vector search, prompt pipelines, and offline-first inference.",
-      "Built modular Compose UI, clean state management with ViewModel and LiveData, plus resilient API fallback flows.",
-      "Integrated Google Maps, Places, Autocomplete, Movement SDK, and Gmail SDK for location-aware and email-intelligence features.",
-    ],
+      "Developed Android applications using Kotlin, Jetpack Compose, and MVVM architecture.",
+      "Integrated REST APIs with Retrofit and implemented Room Database for offline storage.",
+      "Worked on React Native features and resolved production bugs across Android projects.",
+      "Collaborated with senior engineers using Git, code reviews, and Agile development practices.",
+      "Improved application performance, fixed UI issues, and implemented reusable components."
+    ]
   },
+  {
+    company: "IPH Technologies Pvt. Ltd.",
+    location: "Lucknow, Uttar Pradesh",
+    title: "Software Engineer",
+    period: "Apr 2025 – Present",
+    highlights: [
+      "Developing AI-powered Android applications using Jetpack Compose, Kotlin, and MVVM.",
+      "Integrated GPT-based LLMs, offline AI models, and prompt engineering into production apps.",
+      "Built scalable architectures with Room, DataStore, Retrofit, and Hilt.",
+      "Developed React Native modules and contributed to cross-platform mobile applications.",
+      "Worked on healthcare AI solutions with offline-first architecture and local data processing.",
+      "Collaborated with cross-functional teams to deliver production-ready mobile applications."
+    ]
+  }
 ];
-
 export const projects = [
   {
     id: 1,
@@ -110,27 +124,75 @@ export const projects = [
 ];
 
 export const skills = [
-  { id: 1, src: html, title: "HTML", level: 95, group: "Frontend" },
-  { id: 2, src: css, title: "CSS", level: 90, group: "Frontend" },
-  { id: 3, src: javascript, title: "JavaScript", level: 85, group: "Frontend" },
-  { id: 4, src: react, title: "React Js", level: 85, group: "Frontend" },
-  { id: 5, src: tailwindcss, title: "Tailwind CSS", level: 90, group: "Frontend" },
-  { id: 6, title: "React Native", level: 86, group: "Mobile" },
-  { id: 7, title: "Kotlin", level: 88, group: "Android" },
-  { id: 8, title: "Jetpack Compose", level: 86, group: "Android" },
-  { id: 9, title: "MVVM", level: 84, group: "Architecture" },
-  { id: 10, src: nodejs, title: "Node Js", level: 80, group: "Backend" },
-  { id: 11, src: expressjs, title: "Express Js", level: 70, group: "Backend" },
-  { id: 12, src: mongodb, title: "Mongo DB", level: 80, group: "Database" },
-  { id: 13, title: "Room SQLite", level: 82, group: "Database" },
-  { id: 14, title: "RAG Pipeline", level: 82, group: "Generative AI" },
-  { id: 15, title: "LoRA Fine-tuning", level: 78, group: "Generative AI" },
-  { id: 16, title: "Prompt Engineering", level: 86, group: "Generative AI" },
-  { id: 17, src: github, title: "Github", level: 75, group: "Tools" },
-  { id: 18, src: postman, title: "Postman", level: 70, group: "Tools" },
-  { id: 19, src: cpp, title: "C++", level: 95, group: "Languages" },
-  { id: 20, src: c, title: "C", level: 95, group: "Languages" },
-  { id: 21, src: python, title: "Python", level: 70, group: "Languages" },
+  {
+    category: "Mobile Development",
+    items: [
+      { id: 1, title: "Kotlin", level: 95 },
+      { id: 2, title: "Jetpack Compose",level: 95 },
+      { id: 3, title: "Java", level: 90 },
+      { id: 4, title: "React Native", level: 88 },
+      { id: 5, title: "MVVM", level: 95 },
+      { id: 6, title: "Room", level: 90 },
+      { id: 7, title: "Hilt", level: 90 },
+      { id: 8, title: "Retrofit", level: 92 },
+    ],
+  },
+
+  {
+    category: "Frontend",
+    items: [
+      { id: 9, title: "React.js", src: react, level: 90 },
+      { id: 10, title: "JavaScript", src: javascript, level: 90 },
+      { id: 11, title: "HTML5", src: html, level: 95 },
+      { id: 12, title: "CSS3", src: css, level: 90 },
+      { id: 13, title: "Tailwind CSS", src: tailwindcss, level: 95 },
+    ],
+  },
+
+  {
+    category: "Backend",
+    items: [
+      { id: 14, title: "Node.js", src: nodejs, level: 85 },
+      { id: 15, title: "Express.js", src: expressjs, level: 85 },
+      { id: 16, title: "MongoDB", src: mongodb, level: 85 },
+      { id: 17, title: "Firebase",  level: 80 },
+      { id: 18, title: "REST API", level: 92 },
+    ],
+  },
+
+  {
+    category: "Generative AI",
+    items: [
+      { id: 19, title: "Prompt Engineering", level: 92 },
+      { id: 20, title: "RAG", level: 90 },
+      { id: 21, title: "LLM Integration", level: 90 },
+      { id: 22, title: "Gemini API", level: 90 },
+      { id: 23, title: "OpenAI API", level: 90 },
+      { id: 24, title: "Hugging Face", level: 85 },
+      { id: 25, title: "LangChain", level: 80 },
+    ],
+  },
+
+  {
+    category: "Tools & DevOps",
+    items: [
+      { id: 26, title: "Git", level: 92 },
+      { id: 27, title: "GitHub", src: github, level: 92 },
+      { id: 28, title: "Docker", level: 75 },
+      { id: 29, title: "Postman", src: postman, level: 90 },
+      { id: 30, title: "Android Studio", level: 95 },
+      { id: 31, title: "VS Code", level: 95 },
+    ],
+  },
+
+  {
+    category: "Programming Languages",
+    items: [
+      { id: 32, title: "C", src: c, level: 95 },
+      { id: 33, title: "C++", src: cpp, level: 95 },
+      { id: 34, title: "Python", src: python, level: 70 },
+    ],
+  },
 ];
 
 export const aiCapabilities = [
@@ -240,4 +302,36 @@ export const education = [
     time: "Apr 2018 - Mar 2019",
     date: "Grade: 77%",
   },
+];
+export const experiences = [
+  {
+    company: "IPH Technologies Pvt. Ltd.",
+    location: "Lucknow, India",
+    roles: [
+      {
+        title: "Software Engineer",
+        period: "Mar 2025 – Present",
+        current: true,
+        highlights: [
+          "Developed AI-powered Android applications using Kotlin and Jetpack Compose.",
+          "Integrated OpenAI, Gemini, and on-device LLMs.",
+          "Built offline-first architecture using Room and MVVM.",
+          "Worked on React Native applications and REST API integration.",
+          "Implemented Prompt Engineering and RAG pipelines."
+        ]
+      },
+      {
+        title: "Software Engineer Trainee",
+        period: "Oct 2024 – Mar 2025",
+        current: false,
+        highlights: [
+          "Built Android features using Kotlin and XML.",
+          "Learned MVVM, Room, Retrofit, and Coroutines.",
+          "Worked on React Native modules and bug fixing.",
+          "Collaborated with senior developers in Agile sprints.",
+          "Contributed to production releases and code reviews."
+        ]
+      }
+    ]
+  }
 ];
