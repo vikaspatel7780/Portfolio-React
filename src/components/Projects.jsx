@@ -82,18 +82,6 @@ const Projects = () => {
               >
                 <TiltCard onClick={() => setSelectedProject(project)}>
                   <motion.div layoutId={`card-container-${project.id}`}>
-                    {project.src ? (
-                      <div className="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-t-[1.3rem]">
-                        <motion.img
-                          layoutId={`card-img-${project.id}`}
-                          src={project.src}
-                          alt={project.title}
-                          className="h-full w-full object-cover transition duration-700 hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/[0.85] via-black/[0.25] to-transparent" />
-                      </div>
-                    ) : null}
-
                     <div className="p-5 sm:p-7">
                       <motion.p layoutId={`card-cat-${project.id}`} className="text-xs sm:text-sm font-black uppercase tracking-[0.16em] text-cyan-300">
                         {project.category}
@@ -154,17 +142,6 @@ const Projects = () => {
               >
                 <FiX size={20} />
               </button>
-
-              {selectedProject.src && (
-                <div className="relative h-64 sm:h-80 w-full overflow-hidden rounded-2xl mb-6">
-                  <motion.img
-                    layoutId={`card-img-${selectedProject.id}`}
-                    src={selectedProject.src}
-                    alt={selectedProject.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              )}
 
               <motion.p layoutId={`card-cat-${selectedProject.id}`} className="text-xs sm:text-sm font-black uppercase tracking-[0.16em] text-cyan-300">
                 {selectedProject.category}

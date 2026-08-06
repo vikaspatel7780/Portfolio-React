@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
-import logo from "../assets/portfolios/logo.png";
+import logo from "/app_icon.png";
 
 const links = [
   { id: 1, label: "About", link: "about" },
@@ -70,11 +70,10 @@ const Navbar = ({ onOpenCommandPalette }) => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? "border-white/10 bg-[#07080b]/[0.85] shadow-2xl shadow-black/40 backdrop-blur-2xl"
-          : "border-transparent bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${scrolled
+        ? "border-white/10 bg-[#07080b]/[0.2] shadow-2xl shadow-black/40 backdrop-blur-2xl"
+        : "border-transparent bg-transparent"
+        }`}
     >
       <nav className="content-shell flex h-16 sm:h-20 items-center justify-between px-4 sm:px-6">
         <Link to="home" smooth duration={500} className="group flex cursor-pointer items-center gap-3">
